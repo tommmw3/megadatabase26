@@ -1,0 +1,138 @@
+body {
+  background-color: #302e2b;
+}
+
+.historyControls {
+  width: min(660px, 92vw);
+  margin: 26px auto 14px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 16px;
+}
+
+.historyBtn {
+  height: 56px;
+  border: 0;
+  border-radius: 14px;
+  background: linear-gradient(180deg, #3a3a3a, #1f1f1f);
+  box-shadow:
+    0 10px 18px rgba(0, 0, 0, 0.35),
+    inset 0 1px 0 rgba(255, 255, 255, 0.06);
+  color: #e8e8e8;
+  font-size: 22px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  cursor: pointer;
+}
+
+.historyBtn:active {
+  transform: translateY(1px);
+}
+
+.historyBtn:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+}
+
+.historyIcon {
+  display: inline-block;
+  transform: translateY(-1px);
+  user-select: none;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  width: fit-content;
+  margin: auto;
+}
+
+.squareRow {
+  display: flex;
+}
+
+.square {
+  width: 75px;
+  height: 75px;
+}
+
+.white {
+  background-color: #eeeed2;
+}
+
+.black {
+  background-color: #769656;
+}
+
+.highlightYellow {
+  background: #f7f769;
+}
+
+.piece {
+  width: 100%;
+  cursor: pointer;
+  user-select: none;
+}
+
+.dragGhost {
+  position: fixed;
+  z-index: 9999;
+  width: 75px;
+  height: 75px;
+  pointer-events: none;
+  opacity: 1;
+  transform: translateZ(0);
+}
+
+.draggingSource > img.piece {
+  opacity: 0;
+}
+
+.captureColor {
+  background-color: #ee4b2b;
+}
+
+.highlight {
+  width: 32px;
+  display: block;
+  height: 32px;
+  margin: auto;
+  margin-top: 20px;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.17);
+}
+
+.modal {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  right: 0;
+  left: 0;
+}
+
+.blur{
+  filter: blur(20px);
+}
+
+.modal p{
+  font-family: sans-serif;
+  font-size: 35px;
+  padding: 4px 8px;
+  background-color: red;
+  color: white;
+}
+
+.modal img{
+  box-sizing: border-box;
+  border: 5px solid transparent;
+  width: 24%;
+}
+
+.modal img:hover{
+  border: 5px solid yellow;
+  cursor: pointer;
+}

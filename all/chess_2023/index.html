@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles/index.css" />
+    <title>Chess-Game</title>
+  </head>
+  <body>
+    <div class="historyControls" aria-label="Move history controls">
+      <button id="historyStart" class="historyBtn" type="button" title="Go to start">
+        <span class="historyIcon">|&lt;</span>
+      </button>
+      <button id="historyBack" class="historyBtn" type="button" title="Step backward">
+        <span class="historyIcon">&lt;</span>
+      </button>
+      <button id="historyForward" class="historyBtn" type="button" title="Step forward">
+        <span class="historyIcon">&gt;</span>
+      </button>
+      <button id="historyEnd" class="historyBtn" type="button" title="Go to end">
+        <span class="historyIcon">&gt;|</span>
+      </button>
+    </div>
+    <div id="root"></div>
+  </body>
+  <script type="module" src="index.js"></script>
+</html>
